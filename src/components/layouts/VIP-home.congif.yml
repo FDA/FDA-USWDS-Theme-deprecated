@@ -1,0 +1,42 @@
+label: Landing
+handle: layout--landing
+
+hero:
+  callout: "FDA’s Visual Identity Program"
+  title: FDA’s Visual Identity Program 
+  paragraph: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
+  button:
+    text: Learn why visual identity is a priority for FDA.
+    href: "javascript:void(0)"
+
+  nav:
+    search: false
+    links:
+      - text: Home
+        is_current: true
+        id: nav-section-one
+        links: &subnav_links
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+            is_current: false
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: A very long navigation link that goes onto two lines
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+      - text: Requirements and Downloads
+        id: nav-section-two
+        links: *subnav_links
+      - text: Simple link
+        href: "javascript:void(0)"
