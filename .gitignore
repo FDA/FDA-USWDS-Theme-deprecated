@@ -1,0 +1,34 @@
+.DS_store
+.*.swp
+
+# ignore Node-specific files and directories
+node_modules/
+npm-debug.log*
+.gz
+
+# code coverage
+coverage/
+.nyc_output
+
+# ignore the generated dist directory
+dist/
+
+# ignore the Fractal build directory
+build/
+
+# ignore gulp-generated vendor files
+src/stylesheets/lib
+
+# ignore saved screenshots
+spec/screenshots/*.png
+spec/screenshots/metadata.js
+
+# ignore sass cache
+.sass-cache/
+
+# ignore sassdoc build
+sassdoc/
+
+# ignore gulp-generated svg-sprite
+src/img/sprite.svg
+src/img/symbol
