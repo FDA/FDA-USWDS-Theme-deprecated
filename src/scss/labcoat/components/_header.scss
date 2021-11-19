@@ -1,0 +1,29 @@
+.usa-logo a{
+  color: #fff;
+}
+  
+.usa-header {
+  background: $fda-dark-blue;
+  color: #fff;
+}
+
+.usa-header .usa-nav__link:hover::after, .usa-header .usa-nav__primary-item>.usa-current::after {
+  background-color: $fda-gold;
+}
+
+.usa-header--extended .usa-nav {
+  background-color: #fff;
+}
+
+.usa-header--basic .usa-nav__primary button, .usa-header--basic .usa-nav__primary>.usa-nav__primary-item>a {
+  color: #fff;
+}
+
+.usa-nav__primary button , .usa-nav__primary>.usa-nav__primary-item>a{
+  font-weight: 400;
+}
+
+
+.usa-nav__secondary-links a , .usa-nav__secondary-links a:hover, .usa-nav__secondary-links a:focus {
+  color: #fff;
+}
