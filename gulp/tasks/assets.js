@@ -2,6 +2,10 @@ const gulp = require('gulp');
 const svgSprite = require("gulp-svg-sprite");
 const config = require('../config');
 const del = require("del");
+const rename = require('gulp-rename')
+
+// File paths
+const pattern = "**/**";
 
 // SVG sprite configuration
 const SPRITE_CONFIG = {
@@ -25,11 +29,15 @@ const SPRITE_CONFIG = {
 };
 
 /**
+ * Bakes SVG files into SVG sprites.
+ * 
  * Add SVGs to the usa-icons directory or move icons 
- * from usa-icons-unused into usa-icons and rebuild the sprite 
+ * from usa-icons-unused into usa-icons and rebuild the sprite.
+ * 
+ * @link https://github.com/svg-sprite/svg-sprite
  */
 const buildSprite = function() {
-  console.log('Starting build sprites task');
+  console.log('Building sprites');
     return gulp.src( `${config.paths.dist.img}/usa-icons/**/*.svg`, {
             allowEmpty: true,
         })
@@ -55,6 +63,12 @@ const cleanSprite = function() {
     })
 }
 
+const images = function () {
+  return gulp.src( config.paths.src.img + pattern )
+      .pipe(gulp.dest(config.paths.dist.img ))
+};
+
 module.exports = {
-    sprites: gulp.series(buildSprite, renameSprite, cleanSprite)
+    sprites: gulp.series(buildSprite, renameSprite, cleanSprite),
+    images: images
 }

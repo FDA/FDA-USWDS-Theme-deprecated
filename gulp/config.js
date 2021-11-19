@@ -1,7 +1,5 @@
-'use strict';
-
 const minimist = require('minimist');
-const _merge = require('lodash').merge;
+const _merge = require('lodash/merge');
 
 // file paths
 const DIST_PATH = 'dist/';
@@ -17,7 +15,8 @@ const paths = {
     },
     src: {
         scss: SRC_PATH + 'scss/',
-        js: SRC_PATH + 'js/'
+        js: SRC_PATH + 'js/',
+        img: SRC_PATH + 'img/'
     },
     uswds: {
         js: USWDS_PATH + 'js/',
@@ -42,11 +41,11 @@ const run = {
     development: {
         js: {
             sourcemaps: true,
-            uglify: true,
+            uglify: false,
         },
         css: {
             sourcemaps: true,
-            minify: true
+            minify: false
         }
     },
     production: {
@@ -56,17 +55,17 @@ const run = {
         },
         css: {
             sourcemaps: false,
-            minify: false
+            minify: true
         }
     }
 }
 
 // get arguments from command line
-var knownOptions = {
+const knownOptions = {
   string: 'env',
   default: { env: 'development'}
 };
-var options = minimist(process.argv.slice(2), knownOptions);
+const options = minimist(process.argv.slice(2), knownOptions);
 
 module.exports.env = options.env;
 module.exports.run = _merge( {}, run.default, run[options.env] );

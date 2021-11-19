@@ -10,21 +10,23 @@ const SCSS_PATH = config.paths.src.scss + SCSS_PATTERN;
 
 // tasks
 const uswds = require('./gulp/tasks/uswds');
-const { sprites } = require('./gulp/tasks/assets');
-const labcoat = require('./gulp/tasks/labcoat')
+const { sprites, images } = require('./gulp/tasks/assets');
+const sass = require('./gulp/tasks/sass')
 
 const watch = function(done) {
 	console.log('Starting watch task');
 
 	// style changes
-	gulp.watch( SCSS_PATH, labcoat );
+	gulp.watch( SCSS_PATH, sass );
 	done();
 }
 
 module.exports = {
 	watch: watch,
 	sprites: sprites,
-	labcoat: labcoat,
+	images: images,
+	assets: gulp.parallel(sprites, images),
+	sass: sass,
 	uswds: uswds,
 	default: gulp.series(
 		function(done) {
@@ -32,6 +34,6 @@ module.exports = {
 			done();
 		},
 		uswds,
-		labcoat
+		gulp.parallel(sass, assets)
 	)
 }
