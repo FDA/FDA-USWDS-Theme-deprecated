@@ -1,0 +1,19 @@
+extends:
+  - airbnb-base
+  - prettier
+plugins:
+  - import
+rules:
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies: true
+overrides:
+  - files:
+    - gulp/**/*.js
+    - gulpfile.js
+    rules:
+      no-console: 'off'
+env:
+  node: true
+  browser: true
+  es6: true
