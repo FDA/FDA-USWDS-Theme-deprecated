@@ -1,39 +1,29 @@
 const gulp = require('gulp');
-const postcss = require("gulp-postcss");
-const autoprefixer = require('autoprefixer');
-const csso = require("postcss-csso");
-const sass = require("gulp-sass")(require("sass"));
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
+const gulpif = require('gulp-if');
 const config = require('../config');
 
 // file paths
 const pattern = 'styles.scss';
-const NODE_MODULES = [
-    config.paths.uswds.scss
-]
+const NODE_MODULES = [config.paths.uswds.scss];
 
-const POST_CSS_PLUGINS = [
-    // Autoprefix
-    autoprefixer({
-      cascade: false,
-    }),
-    // Minify
-    config.run.css.minify ? csso({ forceMediaMerge: false }) : false
-];
-
-const sass = function () {
-    console.log('Compiling Sass');
-    return gulp.src( `${config.paths.src.scss}${pattern}` )
-        .pipe(sourcemaps.init())
-        .pipe(
-            sass.sync({
-                includePaths: NODE_MODULES
-            })
-            .on('error', sass.logError)
-        )
-        .pipe(postcss(POST_CSS_PLUGINS))
-        .pipe( gulpif( config.run.css.sourcemaps, sourcemaps.write() ))
-        .pipe(gulp.dest( config.paths.dist.css ))
+function styles () {
+  console.log('Compiling Sass');
+  return gulp
+    .src(`${config.paths.src.scss}${pattern}`)
+    .pipe(sourcemaps.init())
+    .pipe(
+      sass
+        .sync({
+          includePaths: NODE_MODULES,
+        })
+        .on('error', sass.logError)
+    )
+    .pipe(postcss(config))
+    .pipe(gulpif(config.run.css.sourcemaps, sourcemaps.write()))
+    .pipe(gulp.dest(config.paths.dist.css));
 };
 
-exports.default = sass
+module.exports = styles;
