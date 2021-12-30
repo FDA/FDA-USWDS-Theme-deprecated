@@ -9,8 +9,8 @@ const pattern = '**/**';
  */
 function theme () {
   return gulp
-    .src(`${config.paths.uswds.scss}theme/${pattern}`)
-    .pipe(gulp.dest(`${config.paths.src.scss}uswds/settings`));
+    .src(`${config.paths.uswds.scss}/theme/${pattern}`)
+    .pipe(gulp.dest(`${config.paths.src.scss}/uswds/settings`));
 };
 
 /**
@@ -18,7 +18,7 @@ function theme () {
  */
 function scripts() {
   return gulp
-    .src(config.paths.uswds.js + pattern)
+    .src(`${config.paths.uswds.js}/${pattern}`)
     .pipe(gulp.dest(config.paths.dist.js));
 };
 
@@ -27,7 +27,7 @@ function scripts() {
  */
 function images() {
   return gulp
-    .src(config.paths.uswds.img + pattern)
+    .src(`${config.paths.uswds.img}/${pattern}`)
     .pipe(gulp.dest(config.paths.dist.img));
 };
 
@@ -36,7 +36,7 @@ function images() {
  */
 function fonts() {
   return gulp
-    .src(config.paths.uswds.fonts + pattern)
+    .src(`${config.paths.uswds.fonts}/${pattern}`)
     .pipe(gulp.dest(config.paths.dist.fonts));
 };
 

@@ -2,27 +2,27 @@ const minimist = require('minimist');
 const merge = require('lodash/merge');
 
 // file paths
-const DIST_PATH = 'dist/';
-const SRC_PATH = 'src/'
-const USWDS_PATH = 'node_modules/uswds/dist/'
+const DIST_PATH = 'dist';
+const SRC_PATH = 'src'
+const USWDS_PATH = 'node_modules/uswds/dist'
 
 const paths = {
     dist: {
-        img: `${DIST_PATH}assets/img/`,
-        fonts: `${DIST_PATH}assets/fonts/`,
-        js: DIST_PATH,
-        css: DIST_PATH
+        img: `${DIST_PATH}/img`,
+        fonts: `${DIST_PATH}/fonts`,
+        js: `${DIST_PATH}/js`,
+        css: `${DIST_PATH}/css`
     },
     src: {
-        scss: `${SRC_PATH}scss/`,
-        js: `${SRC_PATH}js/`,
-        img: `${SRC_PATH}img/`
+        scss: `${SRC_PATH}/scss`,
+        js: `${SRC_PATH}/js`,
+        img: `${SRC_PATH}/img`
     },
     uswds: {
-        js: `${USWDS_PATH}js/`,
-        scss: `${USWDS_PATH}scss/`,
-        img: `${USWDS_PATH}img/`,
-        fonts: `${USWDS_PATH}fonts/`
+        js: `${USWDS_PATH}/js`,
+        scss: `${USWDS_PATH}/scss`,
+        img: `${USWDS_PATH}/img`,
+        fonts: `${USWDS_PATH}/fonts`
     }
 }
 

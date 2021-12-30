@@ -12,7 +12,7 @@ const NODE_MODULES = [config.paths.uswds.scss];
 function styles () {
   console.log('Compiling Sass');
   return gulp
-    .src(`${config.paths.src.scss}${pattern}`)
+    .src(`${config.paths.src.scss}/${pattern}`)
     .pipe(sourcemaps.init())
     .pipe(
       sass

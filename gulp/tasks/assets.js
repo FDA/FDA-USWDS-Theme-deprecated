@@ -55,7 +55,7 @@ function renameSprite() {
       allowEmpty: true,
     })
     .pipe(rename(`${config.paths.dist.img}/sprite.svg`))
-    .pipe(gulp.dest(`./`));
+    .pipe(gulp.dest('./'));
 };
 
 function cleanSprite() {
@@ -65,7 +65,7 @@ function cleanSprite() {
 
 function images() {
   return gulp
-    .src(config.paths.src.img + pattern)
+    .src(`${config.paths.src.img}/${pattern}`)
     .pipe(gulp.dest(config.paths.dist.img));
 };
 
