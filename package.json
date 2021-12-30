@@ -27,6 +27,9 @@
   },
   "license": "CC0 1.0 Universal public domain dedication",
   "devDependencies": {
+    "@frctl/fractal": "^1.5.11",
+    "@frctl/mandelbrot": "^1.9.4",
+    "@frctl/nunjucks": "^2.0.13",
     "autoprefixer": "^10.3.4",
     "del": "^6.0.0",
     "eslint": "^8.3.0",
