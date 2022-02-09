@@ -1,10 +1,10 @@
 // USWDS core packages and utilities
-// node_modules/uswds/dist/scss
+// node_modules/uswds/dist/scss/stylesheets
 // -------------------------------------
 
 // First import required and global packages...
-@import 'packages/required';
-@import 'packages/global';
+@import 'packages/uswds-required';
+@import 'packages/uswds-global';
 
 // Then import individual component packages...
 // @import 'packages/form-controls';

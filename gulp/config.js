@@ -20,7 +20,7 @@ const paths = {
     },
     uswds: {
         js: `${USWDS_PATH}/js`,
-        scss: `${USWDS_PATH}/scss`,
+        scss: `${USWDS_PATH}/scss/stylesheets`,
         img: `${USWDS_PATH}/img`,
         fonts: `${USWDS_PATH}/fonts`
     }
