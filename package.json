@@ -11,8 +11,7 @@
     "prebuild:css": "npm run lint",
     "build:css": "gulp --env production sass",
     "lint": "npx stylelint --syntax=scss src/scss/**/*.scss",
-    "start": "npm run build && fractal start --sync & npm run watch",
-    "test": "snyk test && npm run lint && fractal build",
+    "test": "snyk test && npm run lint",
     "watch": "gulp --env development watch",
     "prettier:scss": "npx prettier --write ./src/scss/**/*.scss"
   },
