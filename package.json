@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "FDA USWDS theme",
   "main": "dist/js/uswds.min.js",
-  "style": "dist/css/uswds.min.css",
+  "style": "dist/css/styles.min.css",
   "sass": "src/scss/styles.scss",
   "scripts": {
     "prebuild": "npm run lint",

@@ -3,6 +3,7 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
+const rename = require('gulp-rename')
 const config = require('../config');
 
 // file paths
@@ -23,6 +24,9 @@ function styles () {
     )
     .pipe(postcss(config))
     .pipe(gulpif(config.run.css.sourcemaps, sourcemaps.write()))
+    .pipe( gulpif(config.run.css.minify, rename({
+      suffix: '.min'
+    })))
     .pipe(gulp.dest(config.paths.dist.css));
 };
 
