@@ -1,6 +1,4 @@
-.usa-hero__callout{
-    background-color: none;
-  
+.usa-hero__callout {  
     .usa-button.usa-button--outline{
         background: #fff;
         border-color: $fda-gold;
@@ -8,12 +6,8 @@
     }
   
 }
-  
-.usa-hero, .usa-hero__heading, .usa-hero__heading--alt{
-    color: $fda-black;
-}
-  
- @media (min-width: 40em){
+
+@media (min-width: 40em) {
     .usa-hero__callout {
         max-width: 40rem;
     }
