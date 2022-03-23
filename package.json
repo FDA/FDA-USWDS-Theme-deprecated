@@ -13,7 +13,9 @@
     "lint": "npx stylelint --syntax=scss src/scss/**/*.scss",
     "test": "snyk test && npm run lint",
     "watch": "gulp --env development watch",
-    "prettier:scss": "npx prettier --write ./src/scss/**/*.scss"
+    "prettier:scss": "npx prettier --write ./src/scss/**/*.scss",
+    "prestart": "gulp --env development",
+    "start": "node server.js"
   },
   "author": "U.S. FDA",
   "contributors": [
