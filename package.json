@@ -28,9 +28,6 @@
   },
   "license": "CC0 1.0 Universal public domain dedication",
   "devDependencies": {
-    "@frctl/fractal": "^1.5.11",
-    "@frctl/mandelbrot": "^1.9.4",
-    "@frctl/nunjucks": "^2.0.13",
     "autoprefixer": "^10.3.4",
     "del": "^6.0.0",
     "eslint": "^8.3.0",
@@ -42,7 +39,7 @@
     "gulp-if": "^3.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "lodash": "^4.17.21",
@@ -58,6 +55,6 @@
     "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
-    "uswds": "^3.0.0-beta.2"
+    "@uswds/uswds": "^3.0.0-beta.4"
   }
 }
