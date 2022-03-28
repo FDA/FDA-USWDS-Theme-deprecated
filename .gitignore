@@ -32,3 +32,6 @@ sassdoc/
 # ignore gulp-generated svg-sprite
 src/img/sprite.svg
 src/img/symbol
+
+# vscode editor
+.vscode/*
