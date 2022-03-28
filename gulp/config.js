@@ -4,7 +4,7 @@ const merge = require('lodash/merge');
 // file paths
 const DIST_PATH = 'dist';
 const SRC_PATH = 'src'
-const USWDS_PATH = 'node_modules/uswds/dist'
+const USWDS_PATH = 'node_modules/@uswds/uswds'
 
 const paths = {
     dist: {
@@ -19,10 +19,11 @@ const paths = {
         img: `${SRC_PATH}/img`
     },
     uswds: {
-        js: `${USWDS_PATH}/js`,
-        scss: `${USWDS_PATH}/scss/stylesheets`,
-        img: `${USWDS_PATH}/img`,
-        fonts: `${USWDS_PATH}/fonts`
+        js: `${USWDS_PATH}/dist/js`,
+        scss: `${USWDS_PATH}/packages`,
+        img: `${USWDS_PATH}/dist/img`,
+        fonts: `${USWDS_PATH}/dist/fonts`,
+        theme: `${USWDS_PATH}/dist/theme`,
     }
 }
 

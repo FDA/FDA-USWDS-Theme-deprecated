@@ -8,7 +8,7 @@ const config = require('../config');
 
 // file paths
 const pattern = 'styles.scss';
-const NODE_MODULES = [config.paths.uswds.scss];
+const NODE_MODULES = config.paths.uswds.scss;
 
 function styles () {
   console.log('Compiling Sass');

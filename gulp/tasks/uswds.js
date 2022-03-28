@@ -9,7 +9,7 @@ const pattern = '**/**';
  */
 function theme () {
   return gulp
-    .src(`${config.paths.uswds.scss}/theme/${pattern}`)
+    .src(`${config.paths.uswds.theme}/${pattern}`)
     .pipe(gulp.dest(`${config.paths.src.scss}/uswds/settings`));
 };
 
