@@ -1,0 +1,58 @@
+// USWDS core packages and utilities
+// node_modules/@uswds/uswds/packages
+// -------------------------------------
+
+// First import global package ...
+@use 'uswds-global';
+
+// or package sets ...
+// @use 'uswds-core';
+// @use "uswds-fonts";
+// @use "uswds-elements/lib/normalize";
+// @use "uswds-elements";
+// @use "uswds-helpers";
+
+// Then import individual component packages ...
+@use 'uswds-typography';
+@use 'usa-accordion';
+@use 'usa-alert';
+@use 'usa-banner';
+@use 'usa-breadcrumb';
+@use 'usa-button-group';
+@use 'usa-button';
+@use 'usa-card';
+@use 'usa-checklist';
+@use 'usa-collection';
+@use 'usa-embed-container';
+@use 'usa-footer';
+@use 'usa-form';
+@use 'usa-graphic-list';
+@use 'usa-header';
+@use 'usa-hero';
+@use 'usa-icon-list';
+@use 'usa-icon';
+@use 'usa-identifier';
+@use 'usa-layout-docs';
+@use 'usa-layout-grid';
+@use 'usa-media-block';
+@use 'usa-modal';
+@use 'usa-nav';
+@use 'usa-pagination';
+@use 'usa-process-list';
+@use 'usa-search';
+@use 'usa-section';
+@use 'usa-sidenav';
+@use 'usa-site-alert';
+@use 'usa-skipnav';
+@use 'usa-step-indicator';
+@use 'usa-summary-box';
+@use 'usa-table';
+@use 'usa-tag';
+@use 'usa-tooltip';
+@use 'uswds-form-controls';
+
+// and utility styles
+@use 'uswds-utilities';
+
+// or import the complete USWDS kit
+// @use "uswds";

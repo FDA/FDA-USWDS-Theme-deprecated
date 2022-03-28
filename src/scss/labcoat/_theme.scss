@@ -3,13 +3,13 @@
 
 // Elements
 // -------------------------------------
-@import './elements/tags';
+@use 'elements/tags';
 
 // Components
 // -------------------------------------
-@import './components/button-groups';
-@import './components/card';
-@import './components//header';
-@import './components/hero';
-@import './components/icon-list';
-@import './components/sidenav';
+@use 'components/button-groups';
+@use 'components/card';
+@use 'components//header';
+@use 'components/hero';
+@use 'components/icon-list';
+@use 'components/sidenav';

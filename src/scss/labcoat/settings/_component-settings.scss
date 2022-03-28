@@ -1,3 +1,5 @@
+@use "../../uswds/settings/uswds-theme-general";
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -93,7 +95,7 @@ $theme-header-max-width: "desktop";
 $theme-header-min-width: "desktop";
 
 // Hero
-$theme-hero-image: "#{$theme-image-path}/hero.png";
+$theme-hero-image: "#{uswds-theme-general.$theme-image-path}/hero.png";
 
 // Identifier
 $theme-identifier-font-family: "ui";

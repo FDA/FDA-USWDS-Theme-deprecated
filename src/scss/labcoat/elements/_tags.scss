@@ -1,4 +1,6 @@
+@use "../settings/color-settings";
+
 .usa-tag {
-    background-color: $fda-gold;
-    color: $fda-black;
+    background-color: color-settings.$fda-gold;
+    color: color-settings.$fda-black;
 }

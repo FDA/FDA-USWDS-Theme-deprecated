@@ -1,7 +1,9 @@
+@use "../settings/color-settings";
+
 .usa-hero__callout {  
     .usa-button.usa-button--outline{
         background: #fff;
-        border-color: $fda-gold;
-        box-shadow: inset 0 0 0 1px $fda-gold;
+        border-color: color-settings.$fda-gold;
+        box-shadow: inset 0 0 0 1px color-settings.$fda-gold;
     }
 }

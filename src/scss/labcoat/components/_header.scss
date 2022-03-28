@@ -1,14 +1,16 @@
+@use "../settings/color-settings";
+
 .usa-logo a{
   color: #fff;
 }
   
 .usa-header {
-  background: $fda-dark-blue;
+  background: color-settings.$fda-dark-blue;
   color: #fff;
 }
 
 .usa-header .usa-nav__link:hover::after, .usa-header .usa-nav__primary-item>.usa-current::after {
-  background-color: $fda-gold;
+  background-color: color-settings.$fda-gold;
 }
 
 .usa-header--extended .usa-nav {

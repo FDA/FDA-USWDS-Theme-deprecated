@@ -1,13 +1,13 @@
 // Override default USWDS settings
 // -------------------------------------
 
-@import '../uswds/settings/uswds-theme-general';
-@import '../uswds/settings/uswds-theme-spacing';
+@use '../uswds/settings/uswds-theme-general';
+@use '../uswds/settings/uswds-theme-spacing';
 
 // @import "../uswds/settings/uswds-theme-typography";
 // @import "../uswds/settings/uswds-theme-color";
 
-@import './settings/typography-settings';
-@import './settings/color-settings';
-@import '../uswds/settings/uswds-theme-utilities';
-@import './settings/component-settings';
+@use 'settings/typography-settings';
+@use 'settings/color-settings';
+@use '../uswds/settings/uswds-theme-utilities';
+@use 'settings/component-settings';
