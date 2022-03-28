@@ -1,11 +1,11 @@
 // Theme settings
 // -------------------------------------
-@import "./labcoat/theme-settings";
+@use 'labcoat/theme-settings';
 
 // USWDS core packages and utilities
 // -------------------------------------
-@import './uswds/uswds';
+@use 'uswds/theme' as u-theme;
 
 // Theme component overrides
 // -------------------------------------
-@import './labcoat/theme'
+@use 'labcoat/theme' as l-theme;
