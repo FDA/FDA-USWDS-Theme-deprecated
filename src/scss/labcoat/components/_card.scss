@@ -1,16 +1,16 @@
-@use "../settings/color-settings";
+@use "../settings" as *;
 
 .fda-card .usa-card__heading a {
   text-decoration: none;
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: color-settings.$fda-dark-blue;
+    color: $fda-dark-blue;
   }
 }
 
 .fda-card.usa-card__container {
   border: none;
-  border-top:6px solid color-settings.$fda-dark-blue;
+  border-top:6px solid $fda-dark-blue;
   box-shadow: 0px 3px 4px 3px rgb(0 0 0 / 8%);
 }

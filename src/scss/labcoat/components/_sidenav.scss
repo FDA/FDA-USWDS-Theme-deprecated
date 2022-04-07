@@ -1,5 +1,5 @@
-@use "../settings/color-settings";
+@use "../settings" as *;
 
 .usa-sidenav .usa-current::after {
-    background-color: color-settings.$fda-gold;
+    background-color: $fda-gold;
 }
