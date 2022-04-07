@@ -15,7 +15,7 @@
     "watch": "gulp --env development watch",
     "prettier:scss": "npx prettier --write ./src/scss/**/*.scss",
     "prestart": "gulp --env development",
-    "start": "node server.js"
+    "start": "NODE_OPTIONS='--experimental-abortcontroller' gulp start"
   },
   "author": "U.S. FDA",
   "contributors": [
