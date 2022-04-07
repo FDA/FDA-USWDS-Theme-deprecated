@@ -1,0 +1,62 @@
+// -------------------------------------
+// Import individual USWDS packages...
+// See https://designsystem.digital.gov/components/
+// See node_modules/@uswds/uswds/packages
+
+// First import individual theme settings
+@forward './settings';
+
+// Then required global package ...
+// @forward 'uswds-global';
+
+// or package sets ...
+@forward 'uswds-core';
+@forward "uswds-fonts";
+@forward "uswds-elements/lib/normalize";
+@forward "uswds-elements";
+@forward "uswds-helpers";
+
+// Then individual component packages ...
+@forward 'uswds-typography';
+@forward 'usa-accordion';
+@forward 'usa-alert';
+@forward 'usa-banner';
+@forward 'usa-breadcrumb';
+@forward 'usa-button-group';
+@forward 'usa-button';
+@forward 'usa-card';
+@forward 'usa-checklist';
+@forward 'usa-collection';
+@forward 'usa-embed-container';
+@forward 'usa-footer';
+@forward 'usa-form';
+@forward 'usa-graphic-list';
+@forward 'usa-header';
+@forward 'usa-hero';
+@forward 'usa-icon-list';
+@forward 'usa-icon';
+@forward 'usa-identifier';
+@forward 'usa-layout-docs';
+@forward 'usa-layout-grid';
+@forward 'usa-media-block';
+@forward 'usa-modal';
+@forward 'usa-nav';
+@forward 'usa-pagination';
+@forward 'usa-process-list';
+@forward 'usa-search';
+@forward 'usa-section';
+@forward 'usa-sidenav';
+@forward 'usa-site-alert';
+@forward 'usa-skipnav';
+@forward 'usa-step-indicator';
+@forward 'usa-summary-box';
+@forward 'usa-table';
+@forward 'usa-tag';
+@forward 'usa-tooltip';
+@forward 'uswds-form-controls';
+
+// and utility styles
+@forward 'uswds-utilities';
+
+// or use the complete USWDS kit
+// @forward "uswds";
