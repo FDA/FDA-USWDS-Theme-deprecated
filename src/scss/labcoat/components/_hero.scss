@@ -1,12 +1,9 @@
 @use "../settings" as *;
-@use 'uswds-core';
-@debug uswds-core.$theme-color-primary;
 
 .usa-hero__callout {  
     .usa-button.usa-button--outline{
         background: #fff;
         border-color: $fda-gold;
         box-shadow: inset 0 0 0 1px $fda-gold;
-        @include uswds-core.u-bg('primary');
     }
 }
