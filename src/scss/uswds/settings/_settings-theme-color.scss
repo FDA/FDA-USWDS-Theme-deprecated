@@ -17,7 +17,7 @@ https://designsystem.digital.gov/design-tokens/color
 ----------------------------------------
 */
 
-@use 'uswds-core/src/styles/settings' with (
+@use 'uswds-core/src/styles/settings/settings-color' with (
     // Base colors
     $theme-color-base-family: "gray-cool",
     $theme-color-base-lightest: "gray-5",
@@ -114,7 +114,7 @@ https://designsystem.digital.gov/design-tokens/color
     $theme-color-emergency-dark: "red-warm-80",
 
     // Links
-    $theme-link-color: "blue-50",
+    $theme-link-color: "primary",
     $theme-link-visited-color: "violet-70v",
     $theme-link-hover-color: "primary-dark",
     $theme-link-active-color: "primary-darker",

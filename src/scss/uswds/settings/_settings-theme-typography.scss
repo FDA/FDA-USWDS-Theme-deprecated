@@ -1,0 +1,32 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS 2.10.0
+----------------------------------------
+TYPOGRAPHY SETTINGS
+----------------------------------------
+Read more about settings and
+USWDS typography tokens in the documentation:
+https://designsystem.digital.gov/design-tokens/typesetting/font-family/
+----------------------------------------
+*/
+@use 'sass:map';
+@use '../../labcoat/settings/' as labcoat;
+@use 'uswds-core/src/styles/settings/settings-typography' with (
+  // basic styling for the following unclassed elements
+  $theme-global-link-styles: 'primary',
+  // Relative font file path.
+  $theme-font-path: map-get($map: labcoat.$theme-paths, $key: "fonts"),
+  // monospace
+  $theme-font-type-mono: "roboto-mono",
+  // sans-serif
+  $theme-font-type-sans: "helvetica",
+  // serif
+  $theme-font-type-serif: "merriweather",
+);
