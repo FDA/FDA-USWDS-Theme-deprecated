@@ -30,6 +30,11 @@ https://designsystem.digital.gov/design-tokens/typesetting/font-family/
   // serif
   $theme-font-type-serif: "merriweather",
 
+  // Body settings are the equivalent of setting the <body> element
+  $theme-body-font-family: "body",
+  $theme-body-font-size: "md",
+  $theme-body-line-height: 5,
+
     // Text and prose
   $theme-text-measure-narrow: 1,
   $theme-text-measure: 6,
