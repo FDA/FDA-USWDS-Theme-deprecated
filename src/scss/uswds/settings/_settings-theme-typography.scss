@@ -29,4 +29,10 @@ https://designsystem.digital.gov/design-tokens/typesetting/font-family/
   $theme-font-type-sans: "helvetica",
   // serif
   $theme-font-type-serif: "merriweather",
+
+    // Text and prose
+  $theme-text-measure-narrow: 1,
+  $theme-text-measure: 6,
+  $theme-text-measure-wide: 6,
+  $theme-prose-font-family: "body",
 );
