@@ -1,3 +1,4 @@
+@use "./uswds-theme-general" as u-general;
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -7,7 +8,7 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.12.2
+USWDS 2.13.1
 ----------------------------------------
 COMPONENT SETTINGS
 ----------------------------------------
@@ -96,7 +97,7 @@ $theme-header-max-width: "desktop";
 $theme-header-min-width: "desktop";
 
 // Hero
-$theme-hero-image: "#{$theme-image-path}/hero.png";
+$theme-hero-image: "#{u-general.$theme-image-path}/hero.png";
 
 // Icon List
 $theme-icon-list-font-family: "body";
