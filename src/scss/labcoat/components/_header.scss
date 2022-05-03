@@ -1,6 +1,7 @@
 @use "../settings" as *;
+@use 'uswds-core' as *;
 
-.usa-logo a{
+.usa-logo a {
   color: #fff;
 }
   
@@ -28,4 +29,15 @@
 
 .usa-nav__secondary-links a , .usa-nav__secondary-links a:hover, .usa-nav__secondary-links a:focus {
   color: #fff;
+}
+
+.usa-header--basic {
+  @include at-media($theme-header-min-width) {
+    .usa-nav-container--full-width {
+      @include u-flex("align-baseline");
+      display: flex;
+      height: 5rem;
+      max-width: none;
+    }
+  }
 }
