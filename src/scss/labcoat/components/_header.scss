@@ -1,6 +1,8 @@
 @use "../settings" as *;
 @use 'uswds-core' as *;
 
+$usa-header-height: 5rem;
+
 .usa-logo a {
   color: #fff;
 }
@@ -36,8 +38,48 @@
     .usa-nav-container--full-width {
       @include u-flex("align-baseline");
       display: flex;
-      height: 5rem;
+      height: $usa-header-height;
       max-width: none;
+    }
+  }
+}
+
+@include at-media($theme-header-min-width) {
+  .usa-nav--secondary {
+    @include u-border-bottom(2px, 'solid', 'base-lighter');
+    display: block;
+    height: 3rem;
+    padding-left: 1rem;
+    z-index: 100;
+    float: none;
+  }
+}
+
+.usa-nav--secondary a {
+  @include u-font('sans', 'sm');
+}
+
+.usa-nav__primary > .usa-nav__primary-item {
+  .usa-current {
+    @include u-text('bold', 'base-darker');
+    position: relative;
+  }
+  .usa-current::after {
+    @include u-bg('accent-warm');
+    position: absolute;
+    display: block;
+    content: "";
+    height: units('05');
+    left: units(1);
+    right: units(1);
+    bottom: 0;
+  }
+}
+
+.usa-navbar {
+  @include at-media-max($theme-header-min-width) {
+    .usa-navbar__menu-btn {
+      height: units($size-touch-target);
     }
   }
 }
