@@ -1,4 +1,5 @@
 @use "../settings" as *;
+@use 'uswds-core' as *;
 
 .usa-hero__callout {  
     .usa-button.usa-button--outline{
@@ -6,4 +7,15 @@
         border-color: $fda-gold;
         box-shadow: inset 0 0 0 1px $fda-gold;
     }
+}
+
+.usa-hero__heading {
+    @include typeset-h1;
+    @include u-text('ink', 'ls-1');
+}
+
+.usa-hero__content {
+    @include u-text('ink', 'ls-neg-1');
+    line-height: line-height('body', 3);
+    font-size: size('body', 'xl');
 }
