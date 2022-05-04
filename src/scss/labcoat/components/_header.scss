@@ -64,15 +64,30 @@ $usa-header-height: 5rem;
     @include u-text('bold', 'base-darker');
     position: relative;
   }
-  .usa-current::after {
-    @include u-bg('accent-warm');
-    position: absolute;
-    display: block;
-    content: "";
-    height: units('05');
-    left: units(1);
-    right: units(1);
-    bottom: 0;
+
+  @include at-media($theme-header-min-width) {
+    .usa-current::after {
+      @include u-bg('accent-warm');
+      position: absolute;
+      display: block;
+      content: "";
+      height: units('05');
+      left: units(1);
+      right: units(1);
+      bottom: 0;
+    }
+  }
+
+  @include at-media-max($theme-header-min-width) {
+    .usa-current::after {
+      @include u-bg('accent-warm');
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+      right: units(1);
+      bottom: units(1);
+    }
   }
 }
 
