@@ -1,0 +1,19 @@
+@use 'uswds-core' as *;
+@use 'usa-button' as usa-btn;
+
+.usa-button--outline-dark {
+    @extend .usa-button--outline;
+    box-shadow: usa-btn.$button-stroke color("primary-dark");
+    color: color("primary-dark");
+
+    &:visited {
+        color: color("primary-dark");
+    }
+
+    &:hover,
+    &.usa-button--hover {
+        background-color: color("transparent");
+        box-shadow: usa-btn.$button-stroke color("primary-darker");
+        color: color("primary-darker");
+    }
+}
