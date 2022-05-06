@@ -15,7 +15,7 @@
 }
 
 .usa-hero__content {
-    @include u-text('ink', 'ls-neg-1');
+    @include u-text('ink', 'ls-1');
     line-height: line-height('body', 3);
     font-size: size('body', 'xl');
 }
