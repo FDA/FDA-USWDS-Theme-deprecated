@@ -1,5 +1,34 @@
 @use "../settings" as *;
+@use 'uswds-core' as *;
 
-.usa-sidenav .usa-current::after {
-    background-color: $fda-gold;
+.usa-sidenav {
+    &--main {
+        display: none;
+        
+        .usa-sidenav__item {
+            border-top: none;
+        }
+
+        .usa-sidenav__item + .usa-sidenav__item a {
+            @include u-border-top(1px, 'solid', 'base-lighter');
+        }
+    }
+
+    @include at-media('desktop') {
+        &--main {
+            display: block;
+            float: left;
+            @include u-margin-y(6);
+            @include u-width('card-lg');
+            @include u-border(1px, 'solid', 'base-lighter');
+            @include u-radius('05');
+        }
+    }
+
+    .usa-current::after {
+        background-color: $fda-gold;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+    }
 }
