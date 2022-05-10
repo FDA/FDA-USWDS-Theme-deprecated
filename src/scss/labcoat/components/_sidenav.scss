@@ -1,28 +1,31 @@
 @use "../settings" as *;
 @use 'uswds-core' as *;
+@use 'usa-sidenav' as *;
 
-.usa-sidenav {
-    &--main {
-        display: none;
-        
-        .usa-sidenav__item {
-            border-top: none;
-        }
+.usa-sidenav__main {
+    display: none;
+}
 
-        .usa-sidenav__item + .usa-sidenav__item a {
-            @include u-border-top(1px, 'solid', 'base-lighter');
-        }
+@include at-media('desktop') {
+    .usa-sidenav__main {
+        display: block;
+        float: left;
+        @include u-margin-y(6);
+        @include u-width('card-lg');
+    }
+}
+
+.usa-sidenav__items {
+    @extend .usa-sidenav;
+    @include u-border(1px, 'solid', 'base-lighter');
+    @include u-radius('05');
+
+    .usa-sidenav__item {
+        border-top: none;
     }
 
-    @include at-media('desktop') {
-        &--main {
-            display: block;
-            float: left;
-            @include u-margin-y(6);
-            @include u-width('card-lg');
-            @include u-border(1px, 'solid', 'base-lighter');
-            @include u-radius('05');
-        }
+    .usa-sidenav__item + .usa-sidenav__item a {
+        @include u-border-top(1px, 'solid', 'base-lighter');
     }
 
     .usa-current::after {
