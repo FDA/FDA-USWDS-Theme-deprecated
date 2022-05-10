@@ -1,0 +1,12 @@
+@use 'uswds-core' as *;
+
+.usa-layout__content {
+    display: inline-block;
+}
+
+// positioning to fill space left by main sidenav with content
+@include at-media('desktop') {
+    .usa-layout__content {
+       width: calc(100% - units('card-lg'));
+    }
+}
