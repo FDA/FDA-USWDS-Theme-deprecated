@@ -29,7 +29,7 @@
     }
 
     .usa-current::after {
-        background-color: $fda-gold;
+        background-color: color('accent-warm');
         top: -1px;
         bottom: -1px;
         left: -1px;

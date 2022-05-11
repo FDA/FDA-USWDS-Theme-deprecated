@@ -1,6 +1,6 @@
-@use "../settings" as *;
+@use 'uswds-core' as *;
 
 .usa-tag {
-    background-color: $fda-gold;
-    color: $fda-black;
+    background-color: color('accent-warm');
+    color: color('ink');
 }

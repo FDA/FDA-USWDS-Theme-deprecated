@@ -13,7 +13,7 @@ $usa-header-height: 5rem;
 }
 
 .usa-header .usa-nav__link:hover::after, .usa-header .usa-nav__primary-item>.usa-current::after {
-  background-color: $fda-gold;
+  background-color: color('accent-warm');
 }
 
 .usa-header--extended .usa-nav {
