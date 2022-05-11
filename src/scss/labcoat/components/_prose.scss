@@ -1,0 +1,5 @@
+@use 'uswds-core' as *;
+
+.usa-prose > .usa-summary-box {
+    @include u-margin-y(3);
+}
