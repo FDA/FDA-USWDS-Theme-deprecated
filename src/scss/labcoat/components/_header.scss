@@ -3,10 +3,29 @@
 
 $usa-header-height: 5rem;
 
-.usa-logo a {
-  color: #fff;
+.usa-logo {
+  font-size: revert;
+  line-height: inherit;
+  @include at-media($theme-header-min-width) {
+    @include u-margin-y(0);
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &__image {
+    @include u-margin-y(0);
+    img {
+      @include u-margin-top(2);
+      width: 2rem;
+      @include at-media($theme-header-min-width) {
+        width: 15rem;
+      }
+    }
+  }
 }
-  
+
 .usa-header {
   background: $fda-dark-blue;
   color: #fff;
@@ -36,9 +55,9 @@ $usa-header-height: 5rem;
 .usa-header--basic {
   @include at-media($theme-header-min-width) {
     .usa-nav-container--full-width {
-      @include u-flex("align-baseline");
+      @include u-flex("align-center");
       display: flex;
-      height: $usa-header-height;
+      height: auto;
       max-width: none;
     }
   }
