@@ -1,7 +1,7 @@
 @use 'uswds-core' as *;
 @use 'usa-button' as usa-btn;
 
-.usa-button--outline-dark {
+.usa-button--outline-primary-dark {
     @extend .usa-button--outline;
     box-shadow: usa-btn.$button-stroke color("primary-dark");
     color: color("primary-dark");
@@ -15,5 +15,49 @@
         background-color: color("transparent");
         box-shadow: usa-btn.$button-stroke color("primary-darker");
         color: color("primary-darker");
+    }
+}
+
+.usa-button--outline-accent-warm-light {
+    @extend .usa-button--outline;
+    box-shadow: usa-btn.$button-stroke color("accent-warm-light");
+    color: color("accent-warm-light");
+
+    &:visited {
+        color: color("accent-warm-light");
+    }
+
+    &:hover,
+    &.usa-button--hover {
+        box-shadow: usa-btn.$button-stroke color('base-lightest');
+        color: color('base-lightest');
+    }
+
+    &:active,
+    &.usa-button--active {
+        box-shadow: usa-btn.$button-stroke color('accent-warm');
+        color: color('accent-warm');
+    }
+}
+
+.usa-button--outline-base-light {
+    @extend .usa-button--outline;
+    box-shadow: usa-btn.$button-stroke color("base-lighter");
+    color: color("base-lighter");
+
+    &:visited {
+        color: color("base-lighter");
+    }
+
+    &:hover,
+    &.usa-button--hover {
+        box-shadow: usa-btn.$button-stroke color('base-lightest');
+        color: color('base-lightest');
+    }
+
+    &:active,
+    &.usa-button--active {
+        box-shadow: usa-btn.$button-stroke color('base-light');
+        color: color('base-light');
     }
 }
