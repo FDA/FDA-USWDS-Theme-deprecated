@@ -1,6 +1,6 @@
 {
   "name": "fda-uswds-theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "FDA USWDS theme",
   "main": "dist/js/uswds.min.js",
   "style": "dist/css/styles.min.css",
