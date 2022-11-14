@@ -1,7 +1,8 @@
 @use "../settings" as *;
 @use 'uswds-core' as *;
 
-$usa-header-height: 5rem;
+$logo-secondary-white: get-image-path('logos/Logo_FDA_Secondary_White.svg');
+$logo-primary-white: get-image-path('logos/Logo_FDA_Primary_White.svg');
 
 .usa-logo {
   font-size: revert;
@@ -15,18 +16,26 @@ $usa-header-height: 5rem;
   }
 
   &__image {
-    @include u-margin-y(0);
-    img {
-      @include u-margin-top(2);
-      width: 2rem;
-      @include at-media($theme-header-min-width) {
-        width: 15rem;
-      }
+    background: left center/contain no-repeat scroll;
+    background-image: url($logo-secondary-white);
+    width: 2rem;
+
+    @include u-display('inline-block');
+    @include u-margin-y(1);
+    @include u-margin-x(0);
+    
+    text-align: left;
+    text-indent: -999em;
+
+    @include at-media($theme-header-min-width) {
+      background-image: url($logo-primary-white);
+      width: 20rem;
     }
   }
 }
 
 .usa-header {
+  @include u-font-size($theme-header-font-family, 'lg');
   background: color('primary-dark');
   color: #fff;
 }
