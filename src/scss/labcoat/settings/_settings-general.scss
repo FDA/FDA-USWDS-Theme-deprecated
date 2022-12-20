@@ -1,4 +1,5 @@
 @use "sass:map";
+@use 'uswds-core';
 
 /*
 ----------------------------------------
@@ -34,8 +35,8 @@ Map relative file paths
 */
 
 $theme-paths: (
-  "img": '../img',
-  "fonts": '../fonts',
+  "img": uswds-core.$theme-image-path,
+  "fonts": uswds-core.$theme-font-path,
 );
 
 @function get-image-path($file) {
