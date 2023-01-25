@@ -53,6 +53,7 @@ Here's what you can expect to find inside the FDA USWDS theme package:
 
 ### Directory structure
 
+```
 [fda-uswds-theme package]
 ├───dist
 │   ├───css
@@ -104,6 +105,7 @@ Here's what you can expect to find inside the FDA USWDS theme package:
 					_settings-theme.scss
 					_uswds-theme-custom-styles.scss
 					_uswds-theme.scss
+```
 
 ## Install using npm
 
