@@ -13,7 +13,8 @@ function createStartTask() {
     const { signal } = controller;
 
     const express = spawn('node', ['./server.js'],
-        { 
+        {
+            env: { NODE_ENV: 'development' }, 
             signal,
         });
 

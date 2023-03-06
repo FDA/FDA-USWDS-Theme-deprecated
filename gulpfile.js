@@ -1,7 +1,9 @@
 // modules
 const gulp = require('gulp');
+const liveReload = require('gulp-livereload');
 
 // config
+const liveReloadPort = 35729
 const config = require('./gulp/config');
 
 // file paths
@@ -15,14 +17,10 @@ const { sprites, images } = require('./gulp/tasks/assets');
 const sass = require('./gulp/tasks/sass');
 const startTask = require('./gulp/tasks/start');
 
-function watchStyles(done) {
-
-  // style changes
-  gulp.watch( SCSS_PATH, gulp.series(sass) );
-  done();
-}
-
 function watch() {
+
+  // livereload listen for changes
+  liveReload.listen({ port: liveReloadPort })
 
   // style changes
   gulp.watch( SCSS_PATH, gulp.series(
