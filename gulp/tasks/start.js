@@ -11,11 +11,15 @@ const { spawn } = require('child_process');
 function createStartTask() {
     const controller = new AbortController();
     const { signal } = controller;
+    const env = {
+        ...process.env,
+        NODE_ENV: 'development'
+    }
 
     const express = spawn('node', ['./server.js'],
         {
-            env: { NODE_ENV: 'development' }, 
-            signal,
+            env, 
+            signal
         });
 
     express.stdout.on('data', (data) => {
