@@ -4,6 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
 const rename = require('gulp-rename')
+const liveReload = require('gulp-livereload');
 const config = require('../config');
 
 // file paths
@@ -27,7 +28,8 @@ function styles () {
     .pipe( gulpif(config.run.css.minify, rename({
       suffix: '.min'
     })))
-    .pipe(gulp.dest(config.paths.dist.css));
+    .pipe(gulp.dest(config.paths.dist.css))
+    .pipe( gulpif( config.env === 'development', liveReload() ));
 };
 
 module.exports = styles;
