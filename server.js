@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // start the server
 const server = app.listen(port, () => {
-  console.log(`Server listening on port ${port}`)
+  console.log(`App server listening on port ${port}`)
 })
 
 // close the server
