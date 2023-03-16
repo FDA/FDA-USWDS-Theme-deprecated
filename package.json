@@ -15,7 +15,9 @@
     "watch": "gulp --env development watch",
     "prettier:scss": "npx prettier --write ./src/scss/**/*.scss",
     "prestart": "gulp --env development",
-    "start": "NODE_OPTIONS='--experimental-abortcontroller' gulp start"
+    "start": "NODE_OPTIONS='--experimental-abortcontroller' gulp start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "U.S. FDA",
   "contributors": [
@@ -28,7 +30,17 @@
   },
   "license": "CC0 1.0 Universal public domain dedication",
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/html": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/testing-library": "0.0.13",
     "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.3.0",
     "connect-livereload": "^0.6.1",
     "del": "^6.0.0",
     "eslint": "^8.3.0",
