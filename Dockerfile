@@ -10,5 +10,6 @@ VOLUME /usr/src/fda-uswds
 WORKDIR /usr/src/fda-uswds
 EXPOSE 3000/tcp
 EXPOSE 35729/tcp
+EXPOSE 6006/tcp
 
 CMD "/bin/bash"
