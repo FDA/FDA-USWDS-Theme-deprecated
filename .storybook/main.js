@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -16,5 +18,17 @@ module.exports = {
       },
     },
   ],
-  "framework": "@storybook/html"
+  "framework": "@storybook/html",
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.twig$/,
+      use: [
+        {
+          loader: 'twigjs-loader'
+        }
+      ]
+    });
+    config.resolve.alias['@'] = path.resolve(__dirname, '../src');
+    return config;
+  }
 }
