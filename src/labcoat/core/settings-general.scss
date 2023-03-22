@@ -1,6 +1,3 @@
-@use "sass:map";
-@use 'uswds-core';
-
 /*
 ----------------------------------------
 General colors
@@ -27,19 +24,3 @@ $youtube-red: #cd201f;
 $instagram-blue: #517fa4;
 $snapchat-yellow: #fffc00;
 $flickr-pink: #ff0084;
-
-/*
-----------------------------------------
-Map relative file paths
-----------------------------------------
-*/
-
-$theme-paths: (
-  "img": uswds-core.$theme-image-path,
-  "fonts": uswds-core.$theme-font-path,
-);
-
-@function get-image-path($file) {
-  $base: map-get($map: $theme-paths, $key: "img");
-  @return "#{$base}/#{$file}";
-}

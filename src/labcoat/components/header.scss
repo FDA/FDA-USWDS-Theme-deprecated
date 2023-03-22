@@ -1,4 +1,4 @@
-@use "../settings" as *;
+@use "../core/functions.scss" as *;
 @use 'uswds-core' as *;
 
 $logo-secondary-white: get-image-path('logos/Logo_FDA_Secondary_White.svg');
