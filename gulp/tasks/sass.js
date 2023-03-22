@@ -8,13 +8,12 @@ const liveReload = require('gulp-livereload');
 const config = require('../config');
 
 // file paths
-const pattern = 'styles.scss';
 const NODE_MODULES = config.paths.uswds.scss;
 
 function styles () {
   console.log('Compiling Sass');
   return gulp
-    .src(`${config.paths.src.scss}/${pattern}`)
+    .src(config.paths.src.styles)
     .pipe(sourcemaps.init())
     .pipe(
       sass

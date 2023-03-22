@@ -8,7 +8,10 @@ const config = require('./gulp/config');
 
 // file paths
 const SCSS_PATTERN = '**/*.scss';
-const SCSS_PATH = `${config.paths.src.scss}/${SCSS_PATTERN}`;
+const SCSS_PATH = [
+  `${config.paths.src.uswds}/${SCSS_PATTERN}`,
+  `${config.paths.src.labcoat}/${SCSS_PATTERN}`
+];
 const PUBLIC_PATH = 'public/*';
 
 // tasks

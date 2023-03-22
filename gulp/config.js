@@ -14,9 +14,12 @@ const paths = {
         css: `${DIST_PATH}/css`
     },
     src: {
-        scss: `${SRC_PATH}/scss`,
+        styles: `${SRC_PATH}/styles.scss`,
         js: `${SRC_PATH}/js`,
-        img: `${SRC_PATH}/img`
+        img: `${SRC_PATH}/img`,
+        uswds: `${SRC_PATH}/uswds`,
+        components: `${SRC_PATH}/components`,
+        labcoat: `${SRC_PATH}/labcoat`
     },
     uswds: {
         js: `${USWDS_PATH}/dist/js`,
